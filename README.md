@@ -1,5 +1,8 @@
 # Frontend Mentor - Social proof section
 
+LIVE DEMO:
+https://icm213.github.io/socialProofSection/
+
 ![Design preview for the Social proof section coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
