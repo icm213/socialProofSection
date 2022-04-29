@@ -1,0 +1,273 @@
+ @font-face {
+    font-family: Spartan;
+    src: url(https://fonts.google.com/specimen/Spartan);
+  } 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: Spartan, sans-serif;
+}
+
+$veryDarkMagenta: hsl(300, 43%, 22%);
+$softPink: hsl(333, 80%, 67%);
+$darkGrayishMagenta: hsl(303, 10%, 53%);
+$lightGrayishMagenta: hsl(300, 24%, 96%);
+$white: hsl(0, 0%, 100%);
+
+.content {
+    display: grid;
+    grid-template-areas: 
+    'top'
+    'center'
+    'bottom';
+}
+
+.top {
+    grid-area: top;
+    background-image: url(../images/bg-pattern-top-mobile.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 5rem 1.5rem 1rem 1.5rem;
+    .topElement {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: $veryDarkMagenta;
+        }
+        p {
+            padding: 1rem 0 1rem 0;
+            font-size: 1.3rem;
+            line-height: 1.5rem;
+            color: $darkGrayishMagenta;
+        }
+    }
+}
+.center {
+    grid-area: center;
+    display: grid;
+    grid-template-columns: 12;
+    grid-template-rows: 12;
+    gap: 1rem;
+    padding: 1rem;
+    .element {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        background-color: $lightGrayishMagenta;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        p {
+            color: $veryDarkMagenta;
+            font-weight: 700;
+        }
+    }
+    .starCont {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem
+    }
+    .centerElement1 {
+        @extend .element;
+        grid-column: 1 / span 12;
+        grid-row: 1/ span 4
+    }
+    .centerElement2 {
+        @extend .element;
+        grid-column: 1 / span 12;
+        grid-row: 5 / span 4
+
+    }
+    .centerElement3 {
+        @extend .element;
+        grid-column: 1 / span 12;
+        grid-row: 9 / span 4
+
+    }
+}
+.bottom {
+    grid-area: bottom;
+    background-image: url(../images/bg-pattern-bottom-mobile.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: grid;
+    grid-template-columns: 12;
+    grid-template-rows: 14;
+    gap: 1rem;
+    padding: 3rem 1rem 1rem 1rem;
+    .bottomElement {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1.5rem;
+        background-color: $veryDarkMagenta;
+        padding: 2rem;
+        border-radius: 0.5rem;
+        p {
+            color: $lightGrayishMagenta;
+            font-weight: 500;
+            line-height: 1.5rem
+        }
+    }
+    .bottomElement1 {
+        @extend .bottomElement;
+        grid-column: 1 / span 12;
+        grid-row: 1 /span 4
+
+    }
+    .bottomElement2 {
+        @extend .bottomElement;
+        grid-column: 1 / span 12;
+        grid-row: 5 /span 4
+
+
+    }
+    .bottomElement3 {
+        @extend .bottomElement;
+        grid-column: 1 / span 12;
+        grid-row: 9 /span 4
+
+    }
+    figure {
+        display: flex;
+        gap: 1.5rem;
+
+        .image {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .imageEl {
+            @for $i from 1 to 4 {
+                .imageEl-#{$i} {
+                    @extend .image;
+                    background-image: url(../images/image-#{$i}.jpg);
+                }
+            }
+        }
+        figcaption {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h5 {
+                font-weight: 400;
+                color: $softPink;
+            }
+            p {
+                color: $lightGrayishMagenta;
+                font-weight: 500;
+                line-height: 1.5rem
+            }
+        }
+    }
+    footer {
+        grid-area: footer;
+        grid-column: 1 / span 12;
+        grid-row: 13 / span 2;
+        gap: 1rem;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 2rem 1.5rem 1rem 1.5rem;
+        text-align: center;
+        p {
+            color: $darkGrayishMagenta;
+            font-size: 10px;
+
+        }
+        a {
+            color: $veryDarkMagenta;
+            text-decoration: none;
+            font-size: 10px;
+
+        }
+        a:hover {
+            border-bottom: solid 1px $veryDarkMagenta;
+            
+        }
+    }
+}
+@media screen and (min-width: 376px) {
+    body {
+        background-image: url(../images/bg-pattern-bottom-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .content {
+        display: grid;
+        grid-template-areas: 
+        'top center'
+        'bottom bottom';
+        grid-template-columns: 1fr 1fr;
+        background-image: url(../images/bg-pattern-top-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: auto;
+    }
+    .top {
+        width: 100%;
+        background-image: none;
+        padding: 5rem;
+    }
+    .center {
+        width: 100%;
+        padding: 5rem;
+
+            .centerElement1 {
+                flex-direction: row;
+                justify-content: flex-start;
+                gap: 2rem;
+                grid-column: 1 / span 10;
+                grid-row: 1 / span 4;
+                padding: 0 2rem 0 2rem
+            }
+            .centerElement2 {
+                flex-direction: row;
+                justify-content: flex-start;
+                gap: 2rem;
+                grid-column: 2 / span 10;
+                grid-row: 5 / span 4;
+                padding: 0 2rem 0 2rem
+            }
+            .centerElement3 {
+                flex-direction: row;
+                justify-content: flex-start;
+                gap: 2rem;
+                grid-column: 3 / span 10;
+                grid-row: 9 / span 4;
+                padding: 0 2rem 0 2rem
+            }
+        
+    }
+    .bottom {
+        width: 100%;
+        background-image: none;
+        padding: 1rem 5rem;
+        .bottomElement1 {
+            grid-column: 1 / span 4;
+            grid-row: 1 / span 10;
+        }
+        .bottomElement2 {
+            grid-column: 5 / span 4;
+            grid-row: 2 / span 10;
+        }
+        .bottomElement3 {
+            grid-column: 9 / span 4;
+            grid-row: 3 / span 10;
+        }
+    }
+}
