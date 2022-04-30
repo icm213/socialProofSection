@@ -18,7 +18,7 @@
 
 .top {
   grid-area: top;
-  background-image: url(images/bg-pattern-top-mobile.svg);
+  background-image: url(../images/bg-pattern-top-mobile.svg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -92,7 +92,7 @@
 
 .bottom {
   grid-area: bottom;
-  background-image: url(images/bg-pattern-bottom-mobile.svg);
+  background-image: url(../images/bg-pattern-bottom-mobile.svg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -150,15 +150,15 @@
 }
 
 .bottom figure .imageEl .imageEl-1 {
-  background-image: url(images/image-1.jpg);
+  background-image: url(../images/image-1.jpg);
 }
 
 .bottom figure .imageEl .imageEl-2 {
-  background-image: url(images/image-2.jpg);
+  background-image: url(../images/image-2.jpg);
 }
 
 .bottom figure .imageEl .imageEl-3 {
-  background-image: url(images/image-3.jpg);
+  background-image: url(../images/image-3.jpg);
 }
 
 .bottom figure figcaption {
@@ -208,7 +208,7 @@
 
 @media screen and (min-width: 376px) {
   body {
-    background-image: url(images/bg-pattern-bottom-desktop.svg);
+    background-image: url(../images/bg-pattern-bottom-desktop.svg);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -216,7 +216,7 @@
     display: grid;
     grid-template-areas: 'top center' 'bottom bottom';
     grid-template-columns: 1fr 1fr;
-    background-image: url(images/bg-pattern-top-desktop.svg);
+    background-image: url(../images/bg-pattern-top-desktop.svg);
     background-repeat: no-repeat;
     background-size: auto;
   }
