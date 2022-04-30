@@ -206,7 +206,7 @@
   border-bottom: solid 1px #502050;
 }
 
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 576px /* value changed from 376px*/) {
   body {
     background-image: url(../images/bg-pattern-bottom-desktop.svg);
     background-repeat: no-repeat;
